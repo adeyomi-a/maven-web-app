@@ -9,10 +9,8 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-container: sonarqube
+container: sonarqube:latest
 name: sonarqube:latest
-
-
 
 steps:
 - task: Maven@3
