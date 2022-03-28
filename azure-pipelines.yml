@@ -22,7 +22,8 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: lambda3docker@0
+
+- task: Docker@2
   inputs:
-    command: 'build'
-    imageBuild: 'maven-web-application'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
