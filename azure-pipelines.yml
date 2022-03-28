@@ -27,3 +27,9 @@ steps:
   inputs:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OC Connection'
+    cmd: 'oc start-build docker'
